@@ -1,8 +1,6 @@
 * 创建私有网络
-```shell script
-docker network create --driver=bridge self
-```
-* 部署gitlab  
+    * `docker network create --driver=bridge self`
+* 部署gitlab
     * 10443
     * 10080
     * 10022
@@ -24,7 +22,6 @@ exit
 docker restart gitlab
 ```
 登录时指定通用密码，登录账号为root
-
 * 部署jenkins
     * 8800
     * 50000
@@ -44,8 +41,3 @@ docker run --rm -u root -it --name jenkins-test --network=self -e "JAVA_OPTS=-Xm
         * 选择 本地策略 - 用户权限分配
         * 点进进去后，选择 作为服务登录
         * 然后将 administrator 加入即可
-
-
-
-
-
